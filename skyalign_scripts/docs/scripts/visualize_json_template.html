@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+      div {
+        width: 1000px;
+        height: 1000px;
+        float: left;
+        margin-right: 50px;
+      }
+      .logo{
+        }
+    </style>
+</head>
+<body>
+    <h2>Click on the figure</h2>
+    <link rel="stylesheet" type="text/css" href="/Users/aneelbiswas/PycharmProjects/skyalign_scripts/skyalign_scripts/docs/scripts/hmm_logo.min.css">
+
+
+    <script src="/Users/aneelbiswas/node_modules/jquery/dist/jquery.js"></script>
+
+
+    <script src="/Users/aneelbiswas/PycharmProjects/skyalign_scripts/skyalign_scripts/docs/scripts/hmm_logo.js"></script>
+
+
+    <div id="logo" class="logo" data-logo="/Users/aneelbiswas/PycharmProjects/skyalign_scripts/skyalign_scripts/test_supplemental/test_outfiles/pro_x_pro_cluster_0_alignment_logo.json"></div>
+
+
+    <script>
+      $(document).ready(function () {
+        $('#logo').hmm_logo();
+      });
+    </script>
+</body>
+
+</html>
