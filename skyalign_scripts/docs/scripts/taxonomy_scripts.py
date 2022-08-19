@@ -9,9 +9,24 @@ This script takes previously creates taxonomy files and represents them in trees
 """
 
 from __future__ import annotations
+from TaxonomyTree import TaxonomyTree, TaxonomyNode
+
+
+euk_prot_csv = '/Users/aneelbiswas/Documents/JoulineLabWork/EukProt_included_data_sets.v02.2020_06_30(1).txt'
+pro_taxonomy = '/Users/aneelbiswas/Documents/JoulineLabWork/CompleteTaxonomyData/corrected_taxonomy2.txt'
+
+
+def get_pro_taxonomy(taxon_file: str = pro_taxonomy) -> TaxonomyTree:
+    pro_tree = TaxonomyTree()
+    with open(taxon_file, 'r', encoding='utf8') as taxons:
+        for line in taxons:
+            genome_id, tax_info = line.split('\t')
+            parent = ''
+            for clade in tax_info.split(';'):
 
 
 def main() -> None:
+
     return None
 
 
