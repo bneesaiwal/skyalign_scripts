@@ -23,10 +23,14 @@ def get_pro_taxonomy(taxon_file: str = pro_taxonomy) -> TaxonomyTree:
             genome_id, tax_info = line.split('\t')
             parent = ''
             for clade in tax_info.split(';'):
+                pro_tree.add_node(clade, parent)
+                parent = clade
+    print(pro_tree)
+    return pro_tree
 
 
 def main() -> None:
-
+    get_pro_taxonomy()
     return None
 
 
