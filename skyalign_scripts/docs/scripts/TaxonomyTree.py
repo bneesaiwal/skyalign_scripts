@@ -45,7 +45,6 @@ class TaxonomyNode:
     children = {}
     depth = 0
 
-
     def __init__(self, name, parent):
         self.name = name
         self.parent = parent
